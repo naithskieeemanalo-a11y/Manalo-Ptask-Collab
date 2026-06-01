@@ -1,0 +1,1 @@
+import Profile from "./components/Profile"; export default function App(){return(<><div className="background-animation"></div><header><h1>🎮 My Portfolio</h1><p>Future Web Developer</p></header><Profile/></>)}

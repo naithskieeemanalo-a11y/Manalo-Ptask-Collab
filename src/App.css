@@ -1,0 +1,149 @@
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:#0f0f1a;
+  color:white;
+  overflow-x:hidden;
+}
+
+.background-animation{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:
+    radial-gradient(circle at top left, rgba(0,255,255,0.2), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(255,0,255,0.2), transparent 30%),
+    linear-gradient(135deg, #111122, #1a0033);
+  z-index:-1;
+}
+
+header{
+  text-align:center;
+  padding:40px;
+  background:rgba(0,0,0,0.5);
+  border-bottom:2px solid cyan;
+}
+
+header h1{
+  font-size:3rem;
+  color:cyan;
+  text-shadow:0 0 20px cyan;
+}
+
+header p{
+  color:#ddd;
+}
+
+.profile-card{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:30px;
+  margin:40px auto;
+  width:85%;
+  background:rgba(255,255,255,0.05);
+  padding:25px;
+  border-radius:20px;
+  box-shadow:0 0 20px rgba(0,255,255,0.3);
+}
+
+.profile-pic{
+  width:200px;
+  border-radius:20px;
+  border:4px solid cyan;
+}
+
+.info h2{
+  margin-bottom:15px;
+  color:cyan;
+}
+
+.about, .skills, .projects, .contact{
+  width:85%;
+  margin:40px auto;
+  background:rgba(255,255,255,0.05);
+  padding:25px;
+  border-radius:20px;
+  box-shadow:0 0 15px rgba(255,0,255,0.2);
+}
+
+.about h2,
+.skills h2,
+.projects h2,
+.contact h2{
+  margin-bottom:20px;
+  color:#ff00ff;
+}
+
+.skill-boxes{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.skill{
+  background:linear-gradient(45deg, cyan, magenta);
+  padding:15px 25px;
+  border-radius:10px;
+  color:black;
+  font-weight:bold;
+}
+
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+  gap:20px;
+}
+
+.project-card{
+  background:#1b1b2f;
+  padding:20px;
+  border-radius:15px;
+  text-align:center;
+  transition:0.3s;
+  border:2px solid transparent;
+}
+
+.project-card:hover{
+  transform:scale(1.05);
+  border-color:cyan;
+  box-shadow:0 0 20px cyan;
+}
+
+.project-card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:10px;
+  margin-bottom:15px;
+}
+
+button{
+  margin-top:10px;
+  padding:10px 20px;
+  border:none;
+  border-radius:10px;
+  background:linear-gradient(45deg, cyan, magenta);
+  color:black;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  transform:scale(1.1);
+  box-shadow:0 0 15px cyan;
+}
+
+@media(max-width:768px){
+  .profile-card{
+    flex-direction:column;
+    text-align:center;
+  }
+}
